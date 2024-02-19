@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gene's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Protest+Riot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+
+    <!-- Making the header, which includes navigation tools -->
+    <nav id = "desktop-nav">
+        <div id = "name">Gene Park</div>
+        <div class = "nav-links">
+            <li><a href="#about">About</a> </li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#activities">Activities</a></li>
+    </nav>
+
+
+    <!-- When screen is squeezed, it makes the hamburger navigation tool -->
+    <nav id = "hamburger-nav">
+        <div id = "name">Gene Park</div>
+        <div class = "hamburger-menu">
+            <div class = "hamburger-icon" onclick="togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class = "menu-links">
+                <li><a href="#about">About</a> </li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#activities">Activities</a></li>
+            
+            </div>
+        </div>
+    </nav>
+    
+
+
+
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <section id = "about">
+        <div class = "section_pic_container">
+            <img id = "my_profile_photo" src = "images/Gene_Park.png" alt = "Gene Park Profile">
+        </div>
+        <div class ="socials">
+            <div class ="section_text">
+                <h1 class = "section_text_p1">About Me</h1>
+                <p class ="description">Hi. My name is Gene. I’m currently a freshman at Dartmouth College. My intended major is Computer Science, and I’m most interested in front-end development and data analysis.</p>
+                <div class ="btn-container">
+                    <button class ="btn btn-color-2" onclick = "window.open('documents/gene_park_resume.pdf')">Download Resume</button>
+                </div>
+            </div>
+            <div id = "socials_container">
+                <img src="./images/linkedin.png"
+                alt = "My linkedin Profile"
+                class ="icon" id = "linkedin_pic"
+                onclick = "location.href= 'https://www.linkedin.com/in/gene-park-239a81292/'">
+
+                <img src="./images/github-logo.png"
+                alt = "My Github Profile"
+                class ="icon" id = "git_pic"
+                onclick = "location.href= 'https://github.com/gene-themachine'">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Journey Section  -->
+    <section id = "journey">
+        <h1 class = "section_text_p1" id = "header"> Progress</h1>
+        <div class = "inside">
+            <img id = "stock_pic" src = "images/my_plot.jpg" alt = "Stock picture of SONY">
+            <h1 class = "section_text" id = "my_journey">
+                <div class = "my_journey_h">My Journey</div>
+                <p class ="description">Looking back, most of my coding skills were self-taught from online courses. I started my coding journey with AP Computer Science A in high school. I, then, picked up Python and data science thereafter from the University of Helsinki’s MOOC, using it to code the stock screener. Wanting to merge my interest in music, I conducted a statistical test to compare sonic features of songs. After seeing the potential for webs to connect with the users, I started learning web-development starting college from the Odin Project. Although my background is mostly self-taught, it shows my consistency and drive to become a better coder.</p>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id = "projects">
+        <h1 class ="section_text_p1" id = "header">Projects</h1>
+            <div class = "flipcards">
+
+                    <div class = "firsttwo">
+                        <div class = "maincontainer" id = "fc1">
+                            <div class = "thecard" id = "red_back" >
+                                <img class ="thefront" src = "images/stocktrader.png">
+
+                                <div class ="theback" id = "back_fc1" >
+                                    <h1 class = "flipcard_header">Trend Based Interactive Stock Screener</h1>
+                                    <p class = "explanation">Developed an interactive and real-time notebook incorporating essential technical analysis tools such as the RSI index, simple moving average, and stochastic oscillator to provide users with insights on the viability of specific stocks for investment purposes.</p>
+                                    <p class = "explanation">Implemented the 8 conditions of the highly successful Mark Minervini trend, a technique known for its high stock win percentage, through coding.</p>
+                                    <div class ="buttons">
+                                        <button class = "github_link" onclick = 'window.location.href = "https://github.com/gene-themachine/Trend-Based-Interactive-Stock-Screener"'>Github</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = "maincontainer" id = "fc2">
+                            <div class = "thecard" id = "blue_back">
+                                <img class ="thefront" src ="images/Beatmachine.png" >
+                                <div class ="theback" id = "back_fc2">
+                                    <h1 class = "flipcard_header">Beat Machine</h1>
+                                    <p class = "explanation">The software enables users to utilize a streamlined digital audio workstation (DAW), with a primary focus on the trap genre. </p>
+                                    <p class ="explanation">It features essential instruments such as bells, 808 bass, and drums. The core objective of this DAW is to facilitate music creation and provide a platform for users to learn the fundamentals of beat making.</p>
+                                    <div class ="buttons">
+                                        <button class = "github_link" onclick = 'window.location.href = "https://github.com/gene-themachine/Beatmachine" ' >Github</button>
+                                        <button class = "live_demo" onclick = 'window.location.href = "https://gene-themachine.github.io/Beatmachine/" '>Live Demo</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class = "lastone">
+
+                        <div class = "maincontainer" id = "fc3">
+                            <div class = "thecard" id = "green_back" >
+                                <img class ="thefront" src = "images/sonicchange.png">
+                                <div class ="theback" id = "back_fc3">
+                                    <h1 class = "flipcard_header">Change in Sonic Features of Viral Music</h1>
+                                    <p class = "explanation">During the COVID-19 pandemic, stay-at-home orders caused fear and anxiety related to social distancing and isolation. The digital age offers tools to analyze media consumption data, particularly music, which shapes moods and mental health during such times. </p>
+                                    <p class ="explanation">This study examines changes in online music consumption behavior post-pandemic, finding increased 'acousticness' and decreased 'danceability' in Spotify tracks. These findings suggest using passive media data to monitor and predict population responses, aiding in policy-making and interventions. </p>
+                                    <div class ="buttons">
+                                        <button class = "github_link" onclick = 'window.location.href =  "https://github.com/gene-themachine/sonic-covid" '>Github </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+            </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id = "activities">
+        <h1 class = "section_text_p2" id = "header"> Activities</h1>
+        <div class ="different_acts">
+
+            <div class = "inside">
+                <img id = "rugby_pic" src = "/images/rugby_pic.png" alt = "Rugby Picture">
+                <h1 class = "section_text" >
+                    <div class = "my_journey_h">Dartmouth Rugby Football Club</div>
+                    <p class ="activity_explanation">Playing for the men's rugby team has been a big part of my lifestyle at Dartmouth. Playing as a flanker or eight, I'm always ready to fight hard and run the ball off the scrum. What makes the team special is the culture. It truly bonds us on and off the field. </p>
+                </h1>
+            </div>
+
+            <div class = "inside">
+                <h1 class = "section_text">
+                    <div class = "my_journey_h">Weightlifting</div>
+                    <p class ="activity_explanation">As an advocate health in general, I think working out in the gym is crucial for both your mental and physical health. I oftentimes go to the gym to get a little break from the day or push my limits with the weights. </p>
+                </h1>
+                <img id = "work_pic1" src = "/images/workout1.png" alt = "Weightlifting Picture">
+            </div>
+
+            <div class = "inside">
+                <img id = "ksa_pic" src = "/images/ksa.JPG" alt = "KSA Execs picture">
+                <h1 class = "section_text">
+                    <div class = "my_journey_h">Korean Students Assoiciation (KSA)</div>
+                    <p class ="activity_explanation">I've had the opportunity to serve as a board member for KSA for the last two terms facilitating social events for the group. </p>
+                </h1>
+            </div>
+        </div>
+        
+    </section>
+
+<!-- Footer Section -->
+    <footer>
+        <nav>
+            <nav class ="nav-links-container">
+                <div class = "nav-links">
+                    <li><a href="#about">About</a> </li>
+        
+                    <li><a href="#projects">Projects</a></li>
+        
+                    <li><a href="#activities">Activities</a></li>
+                </div>
+            </nav>
+
+
+        </nav>
+        <p>Copyright &#169 2024 Gene Park All Rights Reserved</p>
+
+    </footer>
+
+
+
+    <script src="script.js"> </script>
+
+    
+</body>
+</html>

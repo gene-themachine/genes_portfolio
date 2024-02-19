@@ -1,0 +1,651 @@
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: white;
+    color: black;
+    
+}
+
+/* Header navigation tools  */
+
+nav, 
+.nav-links {
+    display:flex;
+
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    
+}
+
+a, btn {
+    transition: all 300ms ease;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    transition: font-size 0.375s ease;
+}
+
+a:hover{ 
+    color:grey;
+    text-decoration: underline;
+    text-underline-offset: 0.7rem;
+    text-decoration-color: rgb(181,181,181);
+    font-size: 1.1em;
+}
+
+#name {
+    font-size: 2rem;
+    transition: font-size 0.375s ease;
+}
+
+#name:hover{
+    cursor: default;
+    font-size: 2.15rem
+}
+
+
+
+/* Hamburger Menu */
+#hamburger-nav {
+    display: none;
+}
+
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+
+}
+
+.menu-links li {
+    list-style: none;
+
+}
+
+
+.menu-links.open{
+    max-height: 300px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    transition: none;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px)
+}
+
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px)
+}
+
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+
+/* Section */
+
+
+/* Applies to all sections */
+section {
+    padding-top: 4vh;
+    height: 80vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+/* About Section */
+
+#about {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+
+.section_pic_container {
+    display: flex;
+    height: 440px;
+    width: 440px;
+    margin: auto, 0;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+}
+
+
+.section_text {
+    text-align: center;
+}
+
+
+.section_text p {
+    font-weight: 600;
+}
+
+.section_text_p1 {
+    text-align: center;
+}
+
+.section_text_p1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.description {
+    font-size: 1.4rem;
+    margin-bottom: 1.025rem;
+}
+
+#socials_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+
+}
+.icon {
+    cursor: pointer;
+    height: 4rem;
+
+}
+ 
+/* linkedin picture */
+#linkedin_pic {
+    filter: grayscale(100%); 
+    transition: filter 0.1s ease-in-out; 
+    transition: transform 0.5s ease; 
+}
+
+#linkedin_pic:hover {
+    filter: grayscale(0%);
+    transform: scale(1.15); 
+}
+
+/* Git picture */
+#git_pic {
+    filter: grayscale(100%); 
+    transition: filter 0.1s ease-in-out; 
+    transition: transform 0.5s ease; 
+    
+
+}
+
+#git_pic:hover {
+    filter: grayscale(0%);
+    transform: scale(1.15); 
+    
+}
+
+/* profile picture */
+#my_profile_photo {
+    transition: transform 0.45s ease; 
+    border-radius: 50%;
+
+    box-shadow: 
+
+        0 0 0 3px black; 
+
+    border-style: solid;
+}
+
+#my_profile_photo:hover {
+    transform: scale(1.05);
+}
+
+/* 
+Button for resume */
+.btn-container {
+    display: flex;
+    justify-content: center
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    border-radius: 2rem;
+
+}
+
+.btn-color-2 {
+    color: rgb(53,53,53) 0.1rem solid;
+}
+.btn-color-2:hover {
+    cursor: pointer;
+    background: rgb(53,53,53);
+    color: white
+
+}
+
+/* journey section */
+
+.journey {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 0;
+    height: 90vh;
+
+}
+
+
+
+.subheader {
+    text-align: center;
+}
+
+.my_journey_h {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+}
+
+
+
+#stock_pic {
+    display: flex;
+    height: 400px;
+    width: auto;
+    
+}
+
+.header_progress{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+}
+
+.inside {
+    display: flex;
+    gap:  5rem;
+
+}
+
+
+#stock_pic {
+    border-radius: 15px;
+
+    box-shadow: 
+        0 0 0 4px #3399FF, /* Outer border (blue color) */
+        0 0 0 8px black; /* Inner border (red color) */
+
+    border-style: solid;
+
+    transition: transform 0.45s ease; 
+
+}
+
+#stock_pic:hover {
+    transform: scale(1.05); /* Increase scale to 120% on hover */
+}
+
+#header{
+    margin-bottom: 5rem;
+
+
+}
+
+
+#my_journey{
+    margin-top: -35px;
+}
+
+
+/* 
+Flip cards */
+
+#projects {
+    margin-top: 5rem;
+    height: 150vh;
+}
+
+.flipcards {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.firsttwo {
+    display: flex;
+    justify-content: center;
+    gap: 7.5rem;
+}
+
+.lastone {
+    display: flex;
+    justify-content: center;
+}
+
+.maincontainer{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: white;
+    border-radius: 15px;
+    
+    border-style: solid;
+    transition: transform 0.3s ease; 
+}
+
+.maincontainer:hover{
+    transform: scale(1.05);
+}
+
+#fc1 {
+    box-shadow: 
+        0 0 0 4px rgb(255,70,70), /* Outer border (blue color) */
+        0 0 0 8px black; /* Inner border (red color) */
+}
+
+#fc2 {
+    box-shadow: 
+        0 0 0 4px #0080FF, /* Outer border (blue color) */
+        0 0 0 8px black; /* Inner border (red color) */
+}
+#fc3 {
+    box-shadow: 
+        0 0 0 4px #00FF00, /* Outer border (blue color) */
+        0 0 0 8px black; /* Inner border (red color) */
+}
+
+
+.thecard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+
+}
+
+.thecard:hover {
+    transform: rotateY(180deg);
+}
+
+#green_back {
+    background: greenyellow;
+}
+
+
+#red_back {
+    background: #f0604a;
+
+}
+
+#blue_back {
+    background: #2196F3;
+}
+
+
+.thefront {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    backface-visibility: hidden;
+}
+
+.theback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: absolute;
+    width: 100%;
+    height:100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background: white;
+}
+
+.flipcard_header {
+    text-align: center;
+
+}
+
+.flipcard_header {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+.explanation {
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.github_link, .live_demo {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.github_link, .live_demo{
+    color: rgb(53,53,53) 0.1rem solid;
+
+}
+.github_link:hover, .live_demo:hover {
+    cursor: pointer;
+    background: rgb(53,53,53);
+    color: white
+}
+
+
+
+
+#back_fc1 {
+    background: #f0604a;
+
+}
+
+#back_fc2 {
+    background: #2196F3;
+}
+
+#back_fc3 {
+    background: greenyellow;
+}
+
+/* activities */
+
+#activities {
+    margin-top: 0;
+    height: auto;
+}
+
+#rugby_pic {
+    display: flex;
+    width: 400px;
+    height: auto;
+}
+
+
+#rugby_pic {
+    border-radius: 15px;
+
+    box-shadow: 
+        0 0 0 4px #3399FF, /* Outer border (blue color) */
+        0 0 0 8px black; /* Inner border (red color) */
+
+    border-style: solid;
+
+    transition: transform 0.45s ease; 
+
+}
+
+#rugby_pic:hover {
+    transform: scale(1.05); /* Increase scale to 120% on hover */
+}
+
+
+#work_pic1 {
+    display: flex;
+    width: 400px;
+    height: auto;
+    
+}
+
+#work_pic1:hover {
+    transform: scale(1.05); /* Increase scale to 120% on hover */
+}
+
+#work_pic1 {
+    border-radius: 15px;
+
+    box-shadow: 
+        0 0 0 4px yellow, /* Outer border (blue color) */
+        0 0 0 8px black; /* Inner border (red color) */
+
+    border-style: solid;
+
+    transition: transform 0.45s ease; 
+
+}
+
+#work_pic1:hover {
+    transform: scale(1.05); /* Increase scale to 120% on hover */
+}
+
+
+.activity_explanation {
+
+    font-size: 1.4rem;
+    margin-bottom: 1.025rem;
+
+}
+
+.section_text_p2 {
+    text-align: center;
+
+}
+
+.section_text_p2 {
+    font-size: 2.5rem;
+
+}
+
+.different_acts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+    
+}
+
+#ksa_pic {
+    display: flex;
+    height: 400px;
+    width: auto;
+
+    
+}
+
+#ksa_pic {
+    border-radius: 15px;
+
+    box-shadow: 
+        0 0 0 4px red, /* Outer border (blue color) */
+        0 0 0 8px black; /* Inner border (red color) */
+
+    border-style: solid;
+
+    transition: transform 0.45s ease; 
+
+}
+#ksa_pic:hover {
+    transform: scale(1.05); /* Increase scale to 120% on hover */
+}
+
+
+footer p{
+    text-align: center;
+}
